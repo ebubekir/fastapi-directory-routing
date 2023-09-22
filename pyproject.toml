@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "fastapi-easy-routing"
 version = "0.0.1"
-description = ""
+description = "The file system-based FastAPI router automatically generates the routing structure from the file system."
 authors = ["Ebubekir Karanfil <karanfilebubekir@gmail.com>"]
 readme = "README.md"
 packages = [{include = "fastapi_directory_routing"}]
@@ -19,8 +19,8 @@ twine = "^4.0.2"
 bumpver = "^2023.1126"
 
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
 
 [tool.bumpver]
 current_version = "0.0.1"
@@ -37,4 +37,4 @@ push = true
     'current_version = "{version}"',
     'version = "{version}"'
 ]
-"ebubekir-test-pypi/__version__.py" = ["{version}"]
+"fastapi_directory_routing/__version__.py" = ["{version}"]
