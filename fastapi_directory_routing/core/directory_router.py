@@ -6,7 +6,27 @@ from fastapi import APIRouter
 METHODS = ["get", "post", "put", "delete"]
 
 
-class EasyRouting(APIRouter):
+class DirectoryRouter(APIRouter):
+    """DirectoryRouter class inherit from fastapi.APIRouter.
+
+    This class begins automatic route scanning upon initialization.
+
+    Args:
+        base_directory (str, optional): Defines the folder to be subjected to automatic route scanning.
+        route_file_name (str, optional): Specifies the file name within the folder where route scanning will be conducted
+
+    Examples:
+        >>> from fastapi import FastAPI
+        >>> from fastapi_directory_routing import DirectoryRouter
+        >>> app = FastAPI()
+        >>> easy_router = DirectoryRouter()
+        >>> app.include_router(prefix="/easy-routes", router=easy_router)
+
+    Todo:
+        * For each route configuration, the __config__ variable will be searched within the files.
+        * Error and exception handling scenarios will be enhanced/developed.
+    """
+
     def __init__(
         self,
         base_directory: str = "api",
