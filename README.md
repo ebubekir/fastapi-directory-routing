@@ -4,6 +4,9 @@
   <sub>The file system-based FastAPI router automatically generates the routing structure from the file system.</sub>
 </p>
 
+```bash
+  pip install fastapi-directory-routing
+```
 
 ---
 
@@ -12,7 +15,6 @@
 Let's imagine a simple routing system where we can create users and departments, and add users to these departments.
 
 Our route tree will roughly look like this.
-
 
 ```
 /api/user [POST]
